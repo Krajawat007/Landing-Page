@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#main {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.top {
+  width: 100%;
+  min-height: 40vh;
+  background-image: url('https://images.saymedia-content.com/.image/t_share/MTkyOTkyMzE2OTQ3MDQ3NjQ1/website-background-templates.png');
+  background-size: cover;
+  background-position: center;
+  background-color: chartreuse;
+  background-repeat: no-repeat;
+}
+
+.top .overlay {
+  position: relative;
+  width: 100%;
+  min-height: inherit;
+  background-color: rgba(0, 0, 0, 0.295);
+}
+
+.text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  padding: 0 10vh;
+  color: aliceblue;
+  border: 5%;
+}
+
+.text h1 {
+  font-weight: 600;
+  font-size: 4vw;
+}
+
+.text .image {
+  background-image: url(OIP.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 220px;
+}
+
+.rtext {
+  display: flex;
+  width: 25%;
+   gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.rtext p {
+  font-size: 15px;
+  margin-left: 10px;
+  gap: 20px;
+}
+
+.icons {
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+  margin-top:10px;
+  color: rgb(15, 9, 9);
+  padding: 15%;
+  
+}
+
+.bottom {
+  display: flex;
+  width: 100%;
+  min-height: 40vh;
+}
+
+.b1, .b2 .up, .b2 .down, .b3 .overlay {
+  position: relative;
+}
+
+.b1::before, .b2 .up::before, .b2 .down .overlay::before, .b3 .overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: -1;
+}
+
+.b1 {
+  width: 30%;
+  min-height: inherit;
+  background-image: url(R.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+}
+
+.b1 h1, .b1 p {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.b2 {
+  width: 30%;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.b2 .up {
+  width: 100%;
+  min-height: 20vh;
+  background-image: url(o.avif);
+  background-size: cover;
+  background-position: center;
+  padding: 30%;
+}
+
+.b2 .up h1, .b2 .up p, .b2 .down .overlay h1 {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.b2 .down {
+  width: 100%;
+  min-height: 20vh;
+  background-image: url(m.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.b3 {
+  width: 40%;
+  min-height: inherit;
+  background-image: url(OIP.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.b3 .overlay {
+  justify-content: right;
+  position: relative;
+  margin-left: 50%;
+  width: 50%;
+  height: 100%;
+  padding: 4vw 3vh;
+}
+
+.b3 .overlay p {
+  padding: 1.2vh;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 700px) {
+  .rtext {
+    flex-direction: column;
+  }
+  .b3 .overlay {
+    width: 100%;
+    margin-left: initial;
+  }
+}
+
+@media (max-width: 500px) {
+  .text {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .text h1 {
+    font-size: 5vh;
+  }
+  .text image {
+    height: 200px;
+    width: 140px;
+    margin-top: 20px;
+  }
+  .rtext {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .rtext p {
+    margin-top: 10px;
+  }
+  .icons {
+    margin-top: 10px;
+  }
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .b1 {
+    width: 100%;
+    min-height: 30vh;
+  }
+  .b2 {
+    width: 100%;
+  }
+  .b2 .up {
+    min-height: 30vh;
+  }
+  .b3 {
+    width: 100%;
+    min-height: 30vh;
+    background-position: left;
+  }
+}
